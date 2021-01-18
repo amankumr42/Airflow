@@ -34,7 +34,7 @@ with DAG("core_concepts", schedule_interval="@daily", catchup=False, default_arg
 
   python_task = PythonOperator(
       task_id = "python_function",
-      python_function = print_random_number,
+      python_callable = print_random_number,
       op_args = [1]
       
   )  
